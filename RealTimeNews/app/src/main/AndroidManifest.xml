@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chao.news.liu">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".views.activity.FlashActivity"
+            android:theme="@style/TransparentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--主界面-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.MainActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--html页面-->
+        <activity
+            android:name=".base.BaseWebActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--国内、国外、体育、科技新闻列表界面-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.BaseNewsActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--微信精选界面-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.WxNewsActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--新闻检索界面-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.FindNewsActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--所有热点界面-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.HotListActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--热点新闻界面-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.HotNewsActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--天气添加地区-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.AreaSelectActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--北京时间-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.BJTimeActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--单位转换-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.UnitConverActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--证件认证-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.CertificateActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--在线翻译-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.TranslateActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--MD5破解-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.MD5Activity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--邮编地址-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.PostcodeActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!--健康知识分类-->
+        <activity
+            android:name="com.chao.news.liu.views.activity.healthy.ClassifyActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
+            />
+        <!--微信分享-->
+        <activity
+            android:name="com.umeng.soexample.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--QQ分享-->
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--人人，新浪分享-->
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault" />
+        <!--友盟-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="587b0226a40fa33392000993" />
+        <!--百度-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="cQ9erdYmuGjh2SDGgLPaNYAOCpUMRIk6" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"></service>
+    </application>
+
+
+</manifest>

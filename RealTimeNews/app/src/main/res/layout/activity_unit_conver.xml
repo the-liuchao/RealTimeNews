@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.liuming.mylibrary.widge.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@color/title_color"
+        app:has_back="false"
+        app:left_icon="@mipmap/btn_back"
+        app:title_size="16sp"
+        app:title_text="单位转换" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/conversion_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:drawableRight="@mipmap/arrow_right"
+                android:padding="10dp"
+                android:hint="请选择转换类型"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/light_gray" />
+
+            <TextView
+                android:id="@+id/conversion_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:drawableRight="@mipmap/arrow_right"
+                android:padding="10dp"
+                android:hint="请选择转换单位"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/light_gray" />
+
+
+            <com.liuming.mylibrary.widge.CommaView
+                android:id="@+id/conversion_value"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_stroke_gray"
+                android:digits="0123456789."
+                android:hint="请输入要转换值"
+                android:imeOptions="actionSend"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/btn_conversion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_fill_circle_primary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="转换"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                android:padding="10dp"
+                android:text="转换结果："
+                android:textSize="14dp" />
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:listSelector="@null"
+                android:overScrollMode="never" />
+        </LinearLayout>
+</LinearLayout>

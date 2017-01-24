@@ -1,0 +1,168 @@
+<resources>
+    <string name="app_name">生活助手</string>
+    <string-array name="mNewsNames">
+        <item>国际新闻</item>
+        <item>国内新闻</item>
+        <item>体育新闻</item>
+        <item>科技新闻</item>
+        <item>旅游新闻</item>
+        <item>奇闻轶事</item>
+    </string-array>
+    <!-- 分享平台名称 -->
+    <string name="umeng_socialize_text_tencent_key">腾讯微博</string>
+    <string name="umeng_socialize_text_wenxin_fav">微信收藏</string>
+    <string name="umeng_socialize_text_sina_key">微博</string>
+    <string name="umeng_socialize_text_qq_key">QQ</string>
+    <string name="umeng_socialize_text_qq_zone_key">QQ空间</string>
+    <string name="umeng_socialize_text_renren_key">人人网</string>
+    <string name="umeng_socialize_text_douban_key">豆瓣</string>
+    <string name="umeng_socialize_text_weixin_key">微信</string>
+    <string name="umeng_socialize_text_weixin_circle_key">微信朋友圈</string>
+    <string name="umeng_socialize_text_weixin_fav_key">微信收藏</string>
+    <string name="umeng_socialize_text_add_custom_platform">请配置用户平台</string>
+    <string name="umeng_example_home_btn_plus">社交分享</string>LE
+    <string name="umeng_socialize_text_waitting_share">分享中&#8230;</string>
+    <string name="umeng_socialize_content_hint">说点啥&#8230;</string>
+    <string name="umeng_socialize_cancel_btn_str">取消</string>
+    <string name="umeng_socialize_send_btn_str">发送</string>
+    <string name="umeng_socialize_female">女</string>
+    <string name="umeng_socialize_male">男</string>
+
+    <string name="umeng_socialize_share">分享</string>
+
+    <string name="umeng_socialize_mail">邮件</string>
+    <string name="umeng_socialize_sms">短信</string>
+    <string name="umeng_socialize_sina">新浪</string>
+    <string name="umeng_socialize_text_yixin_key">易信</string>
+    <string name="umeng_socialize_text_yixincircle_key">易信朋友圈</string>
+
+    <!--单位转换-->
+    <string-array name="length_unit">
+        <item>公里(km)</item>
+        <item>米(m)</item>
+        <item>分米(dm)</item>
+        <item>厘米(cm)</item>
+        <item>毫米(mm)</item>
+        <item>里</item>
+        <item>丈</item>
+        <item>尺</item>
+        <item>寸</item>
+        <item>分</item>
+        <item>厘</item>
+        <item>英寸(in)</item>
+        <item>码(yd)</item>
+        <item>英尺(ft)</item>
+        <item>海里(nmi)</item>
+    </string-array>
+    <string-array name="area_unit">
+        <item>平方公里(km2)</item>
+        <item>平方米(m2)</item>
+        <item>平方分米(dm2)</item>
+        <item>平方厘米(cm2)</item>
+        <item>平方毫米(mm2)</item>
+        <item>平方英里(sq mi)</item>
+        <item>平方英尺(sq ft)</item>
+        <item>平方英寸(sq in)</item>
+        <item>公顷(ha)</item>
+        <item>平方码(sq yd)</item>
+        <item>市亩</item>
+        <item>英亩</item>
+    </string-array>
+    <!--体积-->
+    <string-array name="volume_unit">
+        <item>立方米(m3)</item>
+        <item>公石(hl)</item>
+        <item>十升(dal)</item>
+        <item>立方分米(dm3)</item>
+        <item>分升(dl)</item>
+        <item>厘升(cl)</item>
+        <item>毫升(ml)(cm3)</item>
+        <item>立方毫米(mm3)</item>
+        <item>桶(42加仑)</item>
+        <item>加仑(gal)</item>
+        <item>夸脱(qt)</item>
+        <item>品脱(pt)</item>
+        <item>及耳(gi)</item>
+        <item>液量盎司(fl oz)</item>
+        <item>液量打兰(fl dr)</item>
+        <item>量滴(min)</item>
+        <item>亩英尺</item>
+        <item>立方码</item>
+        <item>立方英尺</item>
+        <item>立方英寸</item>
+    </string-array>
+    <!--重量-->
+    <string-array name="weight_unit">
+        <item>吨(t)</item>
+        <item>公斤(kg)</item>
+        <item>克(g)</item>
+        <item>毫克(mg)</item>
+        <item>担</item>
+        <item>两</item>
+        <item>钱</item>
+        <item>金衡磅(lb t)</item>
+        <item>金衡盎司(oz t)</item>
+        <item>英钱(dwt)</item>
+        <item>金衡格令</item>
+        <item>(英制)长吨</item>
+        <item>(美制)短吨</item>
+        <item>英担(cwt)</item>
+        <item>美担(cwt)</item>
+        <item>英石</item>
+        <item>磅(lb)</item>
+        <item>盎司(oz)</item>
+        <item>打兰(dr)</item>
+        <item>格令</item>
+    </string-array>
+    <!--功-->
+    <string-array name="work_unit">
+        <item>焦耳(J)</item>
+        <item>公斤·米(kg·m)</item>
+        <item>米制马力·时(PS·h)</item>
+        <item>英制马力·时(HP·h)</item>
+        <item>千瓦·时(kW·h)</item>
+        <item>千卡(kcal)</item>
+        <item>英热单位(Btu)</item>
+        <item>英尺·磅(ft·lb)</item>
+    </string-array>
+    <!--功率-->
+    <string-array name="power_unit">
+        <item>瓦(W)</item>
+        <item>千瓦(kW)</item>
+        <item>英制马力(HP)</item>
+        <item>米制马力(PS)</item>
+        <item>公斤·米/秒(kg·m/s)</item>
+        <item>千卡/秒(kcal/s)</item>
+        <item>英热单位/秒(Btu/s)</item>
+        <item>英尺·磅/秒(ft·lb/s)</item>
+        <item>焦耳/秒(J/s)</item>
+        <item>牛顿·米/秒(N·m/s)</item>
+    </string-array>
+    <!--压强-->
+    <string-array name="pressure_unit">
+        <item>巴(bar)</item>
+        <item>千帕(kPa)</item>
+        <item>百帕(hPa)</item>
+        <item>毫巴(mbar)</item>
+        <item>帕斯卡(Pa = N/m2)</item>
+        <item>标准大气压(atm)</item>
+        <item>毫米汞柱(托)(mm Hg = Torr)</item>
+        <item>磅力/英尺2(lbf/ft2)</item>
+        <item>磅力/英寸2(lbf/in2 = PSI)</item>
+        <item>英吋汞柱(in Hg)</item>
+        <item>公斤力/厘米2(kgf/cm2)</item>
+        <item>公斤力/米2(kgf/m2)</item>
+        <item>毫米水柱(mmH2O)</item>
+    </string-array>
+    <!--储存-->
+    <string-array name="storage_unit">
+        <item>比特(bit)</item>
+        <item>字节(B)</item>
+        <item>千字节(KB)</item>
+        <item>兆字节(MB)</item>
+        <item>千兆字节(GB)</item>
+        <item>太字节(TB)</item>
+        <item>拍字节(PB)</item>
+        <item>艾字节(EB)</item>
+    </string-array>
+</resources>

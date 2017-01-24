@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.liuming.mylibrary.widge.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/colorPrimary"
+        app:has_back="true"
+        app:left_icon="@mipmap/btn_back"
+        app:title_size="20sp"
+        app:title_text="北京时间" />
+
+
+    <com.liuming.mylibrary.widge.XClockView
+        android:id="@+id/clock_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/title_height"
+        android:padding="60dp" />
+
+    <TextView
+        android:id="@+id/beijing_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/title_height"
+        android:paddingTop="20dp"
+        android:text="当前时间："
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/update_system"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/title_height"
+        android:paddingTop="5dp"
+        android:text="修改系统时间"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="@dimen/title_height"
+        android:paddingBottom="20dp"
+        android:text="数据来源：阿凡达"
+        android:textColor="#FF888888"
+        android:textSize="12sp" />
+</merge>

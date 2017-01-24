@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@color/title_color"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/icon_share"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_share"
+            android:padding="8dp" />
+
+        <com.liuming.mylibrary.widge.XEditText
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/icon_share"
+            android:background="@drawable/bg_search"
+            android:completionThreshold="1"
+            android:drawableRight="@drawable/search_bg"
+            android:gravity="center_vertical"
+            android:hint="输入搜索关键字"
+            android:imeOptions="actionGo"
+            android:lines="1"
+            android:paddingBottom="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="6dp"
+            android:paddingTop="3dp"
+            android:textColor="#555555"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <com.liuming.mylibrary.widge.XSwipeLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.liuming.mylibrary.widge.ReboundScrollView
+            android:id="@+id/rebound_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.liuming.mylibrary.widge.XGridView
+                    android:id="@+id/news_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#bbbbbb"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:horizontalSpacing="1dp"
+                    android:listSelector="@null"
+                    android:numColumns="3"
+                    android:overScrollMode="never"
+                    android:verticalSpacing="1dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#bbbbbb" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/navi_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                        <com.liuming.mylibrary.widge.viewflow.XViewFlow
+                            android:id="@+id/viewflow"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp" />
+
+                        <com.liuming.mylibrary.widge.viewflow.CircleFlowIndicator
+                            android:id="@+id/indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:layout_marginBottom="10dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="2dp"
+                            app:radius="4dp" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/hot_news"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:text="新闻推荐"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/hot_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上海"
+                            android:textColor="#888888"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#bbbbbb" />
+
+                    <com.liuming.mylibrary.widge.FixedListView
+                        android:id="@+id/hot_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:listSelector="@null"
+                        android:overScrollMode="never" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/wx_news"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:text="微信精选"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/wx_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上海"
+                            android:textColor="#888888"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#bbbbbb" />
+
+                    <com.liuming.mylibrary.widge.FixedListView
+                        android:id="@+id/wx_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:listSelector="@null"
+                        android:overScrollMode="never" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.liuming.mylibrary.widge.ReboundScrollView>
+    </com.liuming.mylibrary.widge.XSwipeLayout>
+</LinearLayout>

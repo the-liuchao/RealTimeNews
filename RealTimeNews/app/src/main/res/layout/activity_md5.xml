@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.liuming.mylibrary.widge.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/colorPrimary"
+        app:has_back="true"
+        app:left_icon="@mipmap/btn_back"
+        app:title_size="16sp"
+        app:title_text="MD5破解" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/title_height"
+        android:layout_marginTop="@dimen/title_height"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="密文"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edit_ciphertext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_stroke_gray"
+            android:gravity="top"
+            android:hint="请输入密文"
+            android:minHeight="120dp"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="查询结果:"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_query_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_stroke_gray"
+            android:enabled="false"
+            android:gravity="top"
+            android:minHeight="120dp"
+            android:padding="5dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_query"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_fill_rect_primary"
+        android:gravity="center"
+        android:text="解密"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+</merge>

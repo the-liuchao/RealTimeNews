@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.liuming.mylibrary.widge.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/colorPrimary"
+        app:has_back="true"
+        app:title_size="16sp"
+        app:left_icon="@mipmap/btn_back"
+        app:title_text="邮编地址" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/title_height"
+        android:layout_marginTop="@dimen/title_height"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_stroke_primary"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_query_addr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_left_circle_primary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="查地址" />
+
+            <TextView
+                android:id="@+id/btn_query_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_right_circle_primary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="查邮编" />
+
+        </LinearLayout>
+
+        <ViewFlipper
+            android:id="@+id/viewflipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <EditText
+                    android:id="@+id/input_postcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_stroke_gray"
+                    android:digits="0123456789"
+                    android:hint="请输入六位邮编号码"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:padding="10dp"
+                    android:textSize="14sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.liuming.mylibrary.widge.LoadmoreListView
+                        android:id="@+id/result_addr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:gravity="top"
+                        android:listSelector="@android:color/transparent"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+
+                    <TextView
+                        android:id="@+id/addr_fail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="加载失败"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/select_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_stroke_gray"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:hint="请选择地址"
+                    android:padding="10dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.liuming.mylibrary.widge.LoadmoreListView
+                        android:id="@+id/result_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:gravity="top"
+                        android:listSelector="@android:color/transparent"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+
+                    <TextView
+                        android:id="@+id/code_fail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="加载失败"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </LinearLayout>
+        </ViewFlipper>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_query"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_fill_rect_primary"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="查询"
+        android:textColor="@android:color/white" />
+
+</merge>

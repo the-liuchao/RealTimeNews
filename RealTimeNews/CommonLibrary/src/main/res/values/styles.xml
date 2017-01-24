@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="dialog_animation">
+        <item name="android:windowEnterAnimation">@animator/dialog_fragment_enter_anim</item>
+        <item name="android:windowExitAnimation">@animator/dialog_fragment_exit_anim</item>
+    </style>
+
+    <!--对话框-->
+    <style name="Progress_Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowAnimationStyle">@style/dialog_animation</item>
+    </style>
+
+    <!--底部进入popupwindow动画样式-->
+    <style name="PopupwindowAnimtion">
+        <item name="android:windowEnterAnimation">@anim/popupwindow_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/popupwindow_bottom_exit</item>
+    </style>
+</resources>
